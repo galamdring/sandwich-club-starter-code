@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,44 +21,95 @@
     <TextView
         android:id="@+id/origin_tv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_iv"
+        tools:text="Origin Text" />
 
     <TextView
+        android:id="@+id/alsoKnownAsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/detail_also_known_as_label"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OriginLabel" />
 
     <TextView
+        android:id="@+id/IngredientsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/detail_ingredients_label"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/also_known_tv" />
+
 
     <TextView
+        android:id="@+id/OriginLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:text="@string/detail_place_of_origin_label"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_iv" />
 
     <TextView
         android:id="@+id/description_tv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descriptionLabel"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin eros enim, vel rutrum augue venenatis quis. Quisque magna massa, porttitor in orci at, vehicula ultricies lectus. Morbi vel neque in lorem efficitur vehicula. Nunc pulvinar nisl lacus, eget tincidunt sem vestibulum ac. Proin hendrerit arcu velit, eu varius orci vulputate vel. Phasellus tincidunt sapien eget purus egestas ullamcorper. Etiam fringilla, neque sed sagittis vehicula, magna odio tincidunt nisi, vitae elementum felis tortor at ipsum. Duis rhoncus cursus mi, quis facilisis est tempor sed. Vestibulum eget turpis lectus. Maecenas quis feugiat erat, eget dignissim mauris." />
 
     <TextView
         android:id="@+id/ingredients_tv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/IngredientsLabel"
+        tools:text="Ingredients \n will \n problably \n be \n a long \n list \n with \n line \m breaks." />
 
     <TextView
         android:id="@+id/also_known_tv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/origin_tv"
+        tools:text="Also Known As \n Can be multiple \n lines..." />
 
     <TextView
+        android:id="@+id/descriptionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/detail_description_label"
-        android:textStyle="bold" />
-</FrameLayout>
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients_tv" />
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

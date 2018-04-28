@@ -38,6 +38,19 @@ public class Sandwich {
         return alsoKnownAs;
     }
 
+    public String getAlsoKnownAsString(){
+        return ListToString(alsoKnownAs);
+    }
+
+    private String ListToString(List<String> list){
+        StringBuilder retVal = new StringBuilder();
+        for(int i=0; i<list.size(); i++){
+            retVal.append(list.get(i));
+            retVal.append("\n");
+        }
+        return retVal.toString().trim();
+    }
+
     public void setAlsoKnownAs(List<String> alsoKnownAs) {
         this.alsoKnownAs = alsoKnownAs;
     }
@@ -69,6 +82,8 @@ public class Sandwich {
     public List<String> getIngredients() {
         return ingredients;
     }
+
+    public String getIngredientsAsString(){ return ListToString(ingredients);}
 
     public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
